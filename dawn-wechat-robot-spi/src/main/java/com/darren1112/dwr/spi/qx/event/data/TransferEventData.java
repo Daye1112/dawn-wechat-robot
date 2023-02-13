@@ -43,12 +43,12 @@ public class TransferEventData extends BaseEventData {
         /**
          * 1|收到转账 2|对方接收转账 3|发出转账 4|自己接收转账 5|对方退还 6|自己退还
          */
-        private int msgSource;
+        private Integer msgSource;
 
         /**
          * 1|即时到账 2|延时到账
          */
-        private int transType;
+        private Integer transType;
 
         /**
          * 金额，单位元

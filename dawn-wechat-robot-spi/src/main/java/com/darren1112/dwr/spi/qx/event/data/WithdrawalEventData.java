@@ -38,12 +38,12 @@ public class WithdrawalEventData extends BaseEventData {
         /**
          * 来源类型：1|好友 2|群聊
          */
-        private int fromType;
+        private Integer fromType;
 
         /**
          * 消息来源：1|别人撤回 2|自己使用手机撤回 3|自己使用电脑撤回
          */
-        private int msgSource;
+        private Integer msgSource;
 
         /**
          * fromType=1时为好友wxid，fromType=2时为群wxid
