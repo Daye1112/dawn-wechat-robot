@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 千寻-获取好友列表param
  *
- * @author luyuhao
+ * @author darren
  * @since 2023/2/13
  */
 @Data

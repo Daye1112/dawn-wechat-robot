@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 千寻-获取个人信息result
  *
- * @author luyuhao
+ * @author darren
  * @since 2023/2/13
  */
 @Data

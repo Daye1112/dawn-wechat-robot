@@ -82,6 +82,12 @@
             <artifactId>ip2region</artifactId>
         </dependency>
         <!-- [ip2region] End -->
+        <!-- [httpclient] Start -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <!-- [httpclient] End -->
         <!-- [Plugins] End -->
     </dependencies>
 </project>
