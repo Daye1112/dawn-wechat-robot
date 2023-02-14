@@ -210,6 +210,48 @@ public class HttpClientUtil {
     /**
      * json格式的post请求
      *
+     * @param url    接口
+     * @param object 对象
+     * @return {@link String}
+     * @author darren
+     * @since 2023/2/13
+     */
+    public String postJsonForJson(String url, Object object) {
+        return postJsonForJson(url, object, CommonConstant.CHARSET, null, null);
+    }
+
+    /**
+     * json格式的post请求
+     *
+     * @param url    接口
+     * @param object 对象
+     * @param params url参数
+     * @return {@link String}
+     * @author darren
+     * @since 2023/2/13
+     */
+    public String postJsonForJson(String url, Object object, Map<String, Object> params) {
+        return postJsonForJson(url, object, CommonConstant.CHARSET, params, null);
+    }
+
+    /**
+     * json格式的post请求
+     *
+     * @param url     接口
+     * @param object  对象
+     * @param params  url参数
+     * @param headers 请求头
+     * @return {@link String}
+     * @author darren
+     * @since 2023/2/13
+     */
+    public String postJsonForJson(String url, Object object, Map<String, Object> params, Map<String, String> headers) {
+        return postJsonForJson(url, object, CommonConstant.CHARSET, params, headers);
+    }
+
+    /**
+     * json格式的post请求
+     *
      * @param url     接口
      * @param object  对象
      * @param charset 编码
@@ -220,7 +262,7 @@ public class HttpClientUtil {
      * @since 2023/2/13
      */
     public String postJsonForJson(String url, Object object, String charset, Map<String, Object> params, Map<String, String> headers) {
-        String fullUrl = HttpUtil.makeGetQuery(url, params);
+        String fullUrl = MapUtil.isEmpty(params) ? url : HttpUtil.makeGetQuery(url, params);
         CloseableHttpClient httpClient = null;
         CloseableHttpResponse response = null;
         HttpPost post = new HttpPost(fullUrl);

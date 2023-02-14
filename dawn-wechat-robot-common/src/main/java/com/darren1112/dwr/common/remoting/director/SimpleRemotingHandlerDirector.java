@@ -1,5 +1,6 @@
 package com.darren1112.dwr.common.remoting.director;
 
+import com.alibaba.fastjson.TypeReference;
 import com.darren1112.dwr.common.exception.RemotingException;
 import com.darren1112.dwr.common.remoting.base.BaseSimpleRemotingHandler;
 
@@ -23,19 +24,19 @@ public class SimpleRemotingHandlerDirector {
     /**
      * 简单对象处理
      *
-     * @param clazz 类型
+     * @param typeReference 类型
      * @return {@link T 泛型对象}
      * @throws RemotingException 远程调用异常
      * @author darren
      * @since 2021/4/25 19:18
      */
-    public <T> T simpleHandle(Class<T> clazz) throws RemotingException {
+    public <T> T simpleHandle(TypeReference<T> typeReference) throws RemotingException {
         // 空值校验
         baseSimpleRemotingHandler.blankValidate();
         // 结果预校验
         baseSimpleRemotingHandler.preValidate();
         // 类型转换
-        T t = baseSimpleRemotingHandler.convertTo(clazz);
+        T t = baseSimpleRemotingHandler.convertTo(typeReference);
         // 结果校验
         baseSimpleRemotingHandler.resultValidate(t);
         return t;

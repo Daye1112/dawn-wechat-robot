@@ -15,10 +15,6 @@
 
     <dependencies>
         <!-- [wechatRobot] Start -->
-        <dependency>
-            <groupId>com.darren1112</groupId>
-            <artifactId>dawn-wechat-robot-spi</artifactId>
-        </dependency>
         <!-- [wechatRobot] End -->
 
         <!-- [Spring Boot] Start -->

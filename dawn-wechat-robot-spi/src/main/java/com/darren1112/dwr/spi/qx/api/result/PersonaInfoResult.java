@@ -11,7 +11,7 @@ import java.io.Serializable;
  * @since 2023/2/13
  */
 @Data
-public class PersonalnfoResult implements Serializable {
+public class PersonaInfoResult implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

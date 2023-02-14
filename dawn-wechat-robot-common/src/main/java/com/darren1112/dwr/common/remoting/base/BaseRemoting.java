@@ -1,5 +1,6 @@
 package com.darren1112.dwr.common.remoting.base;
 
+import com.alibaba.fastjson.TypeReference;
 import com.darren1112.dwr.common.remoting.director.ListRemotingHandlerDirector;
 import com.darren1112.dwr.common.remoting.director.SimpleRemotingHandlerDirector;
 
@@ -18,27 +19,27 @@ public abstract class BaseRemoting {
     /**
      * 响应结果校验
      *
-     * @param handler 响应处理器
-     * @param clazz   转换对象类型
+     * @param handler       响应处理器
+     * @param typeReference 转换对象类型
      * @return 转换结果
      * @author darren
      * @since 2020/12/24 13:32
      */
-    public <T> T checkSimpleResult(BaseSimpleRemotingHandler handler, Class<T> clazz) {
-        return new SimpleRemotingHandlerDirector(handler).simpleHandle(clazz);
+    public <T> T checkSimpleResult(BaseSimpleRemotingHandler handler, TypeReference<T> typeReference) {
+        return new SimpleRemotingHandlerDirector(handler).simpleHandle(typeReference);
     }
 
     /**
      * 响应结果校验
      *
-     * @param handler 响应处理器
-     * @param clazz   转换对象类型
+     * @param handler       响应处理器
+     * @param typeReference 转换对象类型
      * @return 转换结果
      * @author darren
      * @since 2020/12/24 13:32
      */
-    public <T> List<T> checkListResult(BaseListRemotingHandler handler, Class<T> clazz) {
-        return new ListRemotingHandlerDirector(handler).simpleHandle(clazz);
+    public <T> List<T> checkListResult(BaseListRemotingHandler handler, TypeReference<T> typeReference) {
+        return new ListRemotingHandlerDirector(handler).simpleHandle(typeReference);
     }
 
     /**

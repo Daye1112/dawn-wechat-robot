@@ -1,5 +1,6 @@
 package com.darren1112.dwr.common.remoting.base;
 
+import com.alibaba.fastjson.TypeReference;
 import com.darren1112.dwr.common.exception.RemotingException;
 import com.darren1112.dwr.common.util.StringUtil;
 
@@ -48,13 +49,13 @@ public abstract class BaseListRemotingHandler {
     /**
      * 响应转换
      *
-     * @param clazz 类型
+     * @param typeReference 类型
      * @return 转换对象
      * @throws RemotingException 远程调用异常
      * @author darren
      * @since 2020/12/24 11:13
      */
-    public abstract <T> List<T> convertTo(Class<T> clazz) throws RemotingException;
+    public abstract <T> List<T> convertTo(TypeReference<T> typeReference) throws RemotingException;
 
     /**
      * 响应结果校验

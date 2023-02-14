@@ -16,6 +16,8 @@ public class ResponseConstant {
 
     public static final String SUCCESS_RESPONSE_CODE_200 = "200";
 
+    public static final Integer SUCCESS_RESPONSE_CODE_INT_200 = 200;
+
     public static final String SUCCESS_RESPONSE_CODE_00 = "00";
 
     public static final String SUCCESS_RESPONSE_MSG = "success";
