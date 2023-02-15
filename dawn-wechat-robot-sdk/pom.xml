@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>dawn-wechat-robot-sdk-starter-qx</module>
+        <module>dawn-wechat-robot-sdk-starter-web</module>
     </modules>
 
     <artifactId>dawn-wechat-robot-sdk</artifactId>

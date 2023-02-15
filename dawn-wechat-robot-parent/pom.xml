@@ -49,12 +49,12 @@
             </dependency>
             <dependency>
                 <groupId>com.darren1112</groupId>
-                <artifactId>dawn-wechat-robot-server</artifactId>
+                <artifactId>dawn-wechat-robot-sdk-starter-qx</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.darren1112</groupId>
-                <artifactId>dawn-wechat-robot-sdk-starter-qx</artifactId>
+                <artifactId>dawn-wechat-robot-sdk-starter-web</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- [wechatRobot] End -->

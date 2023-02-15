@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @since 2023/02/11
  */
 @Data
-@ConfigurationProperties(prefix = "dawn.wechat.robot.qx")
+@ConfigurationProperties(prefix = "dwr.qx")
 public class QxProperties {
 
     /**
