@@ -16,6 +16,6 @@ public class QxProperties {
     /**
      * 客户端url
      */
-    private String clientUrl = "http://127.0.0.1:7777/DaenWxHook/httpapi";
+    private String clientUrl = "http://127.0.0.1:7777/DaenWxHook/httpapi/";
 
 }

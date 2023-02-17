@@ -72,7 +72,7 @@ public class QxRemotingImpl extends BaseRemoting implements QxRemoting {
      * @since 2023/2/14
      */
     @Override
-    public <T, K> ApiListResultDto<T> getWeChatList(ApiParamDto<K> param, String wxid, ApiTypeEnum apiType) throws RemotingException {
+    public <T, K> ApiListResultDto<T> request(ApiParamDto<K> param, String wxid, ApiTypeEnum apiType) throws RemotingException {
         String result = null;
         param.setType(apiType.getType());
         Map<String, Object> params = new HashMap<>();

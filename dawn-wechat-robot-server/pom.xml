@@ -17,10 +17,6 @@
         <!-- [wechatRobot] Start -->
         <dependency>
             <groupId>com.darren1112</groupId>
-            <artifactId>dawn-wechat-robot-spi</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.darren1112</groupId>
             <artifactId>dawn-wechat-robot-sdk-starter-qx</artifactId>
         </dependency>
         <dependency>

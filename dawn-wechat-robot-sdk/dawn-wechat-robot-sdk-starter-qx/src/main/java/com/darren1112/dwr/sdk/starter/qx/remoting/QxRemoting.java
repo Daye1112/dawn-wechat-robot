@@ -50,6 +50,6 @@ public interface QxRemoting {
      * @author darren
      * @since 2023/2/14
      */
-    <T, K> ApiListResultDto<T> getWeChatList(ApiParamDto<K> param, String wxid, ApiTypeEnum apiType) throws RemotingException;
+    <T, K> ApiListResultDto<T> request(ApiParamDto<K> param, String wxid, ApiTypeEnum apiType) throws RemotingException;
 
 }

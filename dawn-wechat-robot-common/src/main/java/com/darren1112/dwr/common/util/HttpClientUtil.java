@@ -121,6 +121,7 @@ public class HttpClientUtil {
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         } finally {
+            abort(get);
             close(response);
         }
         return null;
@@ -176,6 +177,7 @@ public class HttpClientUtil {
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         } finally {
+            abort(post);
             close(response);
         }
         return null;
@@ -290,7 +292,7 @@ public class HttpClientUtil {
         } catch (Exception e) {
             log.error("url: " + fullUrl + ", method: POST, json: " + jsonBody, e);
         } finally {
-            close(httpClient);
+            abort(post);
             close(response);
         }
         return null;
