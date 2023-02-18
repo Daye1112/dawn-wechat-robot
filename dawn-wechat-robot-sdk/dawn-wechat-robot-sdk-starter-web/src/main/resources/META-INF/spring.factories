@@ -1,0 +1,5 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.darren1112.dwr.sdk.starter.web.config.WebMvcBeanAutoConfig, \
+  com.darren1112.dwr.sdk.starter.web.config.AsyncExceptionConfig, \
+  com.darren1112.dwr.sdk.starter.web.config.CustomizeTomcatConfig
