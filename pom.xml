@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.darren1112</groupId>
+    <artifactId>dawn-wechat-robot</artifactId>
+    <version>1.0.0</version>
+    <description>拂晓·微信机器人</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>dawn-wechat-robot-parent</module>
+        <module>dawn-wechat-robot-common</module>
+        <module>dawn-wechat-robot-sdk</module>
+        <module>dawn-wechat-robot-server</module>
+        <module>dawn-wechat-robot-spi</module>
+    </modules>
+</project>
