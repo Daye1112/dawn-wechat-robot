@@ -57,6 +57,11 @@
                 <artifactId>dawn-wechat-robot-sdk-starter-web</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.darren1112</groupId>
+                <artifactId>dawn-wechat-robot-sdk-starter-openapi</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- [wechatRobot] End -->
 
             <!-- [数据源依赖] Start -->

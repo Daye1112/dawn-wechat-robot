@@ -13,6 +13,7 @@
     <modules>
         <module>dawn-wechat-robot-sdk-starter-qx</module>
         <module>dawn-wechat-robot-sdk-starter-web</module>
+        <module>dawn-wechat-robot-sdk-starter-openapi</module>
     </modules>
 
     <artifactId>dawn-wechat-robot-sdk</artifactId>

@@ -112,9 +112,7 @@ public class HttpClientUtil {
                 HttpEntity entity = response.getEntity();
                 if (entity != null) {
                     String result = EntityUtils.toString(entity, charSet);
-                    if (log.isDebugEnabled()) {
-                        log.debug("get, uri = " + uri + ", result = " + result);
-                    }
+                    log.info("url: {}, method: GET: {}, result: {}", uri, result);
                     return result;
                 }
             }

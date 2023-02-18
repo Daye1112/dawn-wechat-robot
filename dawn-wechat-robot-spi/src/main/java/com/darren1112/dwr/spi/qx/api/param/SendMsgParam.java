@@ -1,6 +1,7 @@
 package com.darren1112.dwr.spi.qx.api.param;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
@@ -11,6 +12,7 @@ import java.io.Serializable;
  * @since 2023/2/13
  */
 @Data
+@Accessors(chain = true)
 public class SendMsgParam implements Serializable {
 
     private static final long serialVersionUID = 1L;

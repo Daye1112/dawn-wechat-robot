@@ -73,6 +73,7 @@ public class QxRemotingImpl extends BaseRemoting implements QxRemoting {
      */
     @Override
     public <T, K> ApiListResultDto<T> request(ApiParamDto<K> param, String wxid, ApiTypeEnum apiType) throws RemotingException {
+        log.info("操作内容: {}", apiType.getDesc());
         String result = null;
         param.setType(apiType.getType());
         Map<String, Object> params = new HashMap<>();
@@ -82,7 +83,6 @@ public class QxRemotingImpl extends BaseRemoting implements QxRemoting {
             }
 
             result = httpClientUtil.postJsonForJson(qxProperties.getClientUrl(), param, params);
-            log.info("{}, result: {}", apiType.getDesc(), result);
             return super.checkSimpleResult(new QxRemotingHandler(result),
                     new TypeReference<ApiListResultDto<T>>() {
                     });
