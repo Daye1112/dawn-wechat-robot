@@ -13,6 +13,10 @@
 
     <artifactId>dawn-wechat-robot-server</artifactId>
 
+    <properties>
+        <target.dir>D:\package\dawn-wechat-robot</target.dir>
+    </properties>
+
     <dependencies>
         <!-- [wechatRobot] Start -->
         <dependency>
@@ -45,4 +49,38 @@
         </dependency>
         <!-- Spring Boot End -->
     </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.darren1112.dwr.server.DwrServerApplication</mainClass>
+                </configuration>
+            </plugin>
+
+            <!--指定打包路径-->
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <mkdir dir="${target.dir}/"/>
+                                <copy file="${project.build.directory}/${project.build.finalName}.jar"
+                                      tofile="${target.dir}/${project.build.finalName}.jar" overwrite="true"/>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

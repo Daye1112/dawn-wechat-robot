@@ -52,12 +52,12 @@ public class HttpClientUtil {
     /**
      * 默认30000毫秒
      */
-    private final static int SOCKET_TIMEOUT = 30000;
+    private final static int SOCKET_TIMEOUT = 300000;
 
     /**
      * 默认30000毫秒
      */
-    private final static int CONNECT_TIMEOUT = 30000;
+    private final static int CONNECT_TIMEOUT = 300000;
 
     /**
      * 连接池，最大连接数
